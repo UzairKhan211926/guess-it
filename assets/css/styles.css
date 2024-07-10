@@ -6,7 +6,7 @@
     text-align: center;
     max-width: 60%;
     margin: auto;
-    margin-top: 1.25rem;
+    margin-top: 20px;
 }                                             
 
 h1 {
@@ -19,7 +19,7 @@ h1 {
 h2 {
     text-align: center;
     margin: auto;
-    margin-top: 1.25rem;
+    margin-top: 20px;
     font-size: 200%;
     text-transform: capitalize;
 }
@@ -33,9 +33,9 @@ h2 {
  }
 
 :root {--bg-color: linear-gradient(to right top,
-    #acb4f8, #accbf8, #ace6f8, #acf8f8,
-    #acf8e8, #acf8ee, #acf8d8, #acf8c5,
-    #bef8ac, #c4f8ac, #f8f7ac, #acc0f8);}
+    #f8acac, #f8acdb, #daacf8, #8e8cf7,
+    #acdcf8, #82f1e3, #7af3c1, #6efa69,
+    #d1f8ac, #faf28a, #f3be4c, #f36262);}
 
 body { background-image: var(--bg-color);
        font-family:Arial, Helvetica, sans-serif;
@@ -44,7 +44,7 @@ body { background-image: var(--bg-color);
 
 h1, h2 {font-family:'Courier New', Courier, monospace;
         font-weight: 950;
-        letter-spacing: .5rem;
+        letter-spacing: 8px;
         color: black;
 }
 
@@ -52,7 +52,7 @@ h1, h2 {font-family:'Courier New', Courier, monospace;
 
  #game-arena {max-width: 1000px;
     height: 1000px;
-    margin: 1.25rem auto;
+    margin: 20px auto;
     border-radius: 20px;
     box-shadow: 3px 3px 3px #3e4a3d;
     position: relative;
@@ -63,7 +63,7 @@ h1, h2 {font-family:'Courier New', Courier, monospace;
     width: 600px;
     height: 600px;
     position: absolute;
-    top: 1.875rem; /*30px*/
+    top: 30px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 20px;
@@ -77,10 +77,10 @@ h1, h2 {font-family:'Courier New', Courier, monospace;
 }
 
 #options-arena {width: 100%;
-    min-height: 6.25rem;
+    min-height: 100px;
     position: absolute;
     left: 0;
-    bottom: 15.25rem; /*244px*/
+    bottom: 244px;
     display: flex;
     gap: 1rem
 }
@@ -90,12 +90,87 @@ h1, h2 {font-family:'Courier New', Courier, monospace;
 }
 
 .arena-radio-buttons {
-    margin: 1.25rem 0.5rem 1.25rem 1.563rem;
+    margin: 20px 8px 20px 25px;
     width: 20px;
     height: 20px;
 }
 
 label {
-    margin-right: 1.25rem;
+    margin-right: 20px;
     font-size: 20px;
+}
+
+.none-display-property {
+    display: none;
+}
+
+#arena-submit {
+    width: 50%;
+    height: 130px;
+    position: absolute;
+    bottom: 100px;
+    left: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+#arena-submit-button {
+    width: 90px;
+    height: 40px;
+    margin: auto;
+    border: none;
+    border-radius: 5px;
+    background-size: 400%;
+    background-color: grey;
+    background-position: left;
+    color: black;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+#arena-submit-button:hover{
+    background-position: center;
+    box-shadow: 2px 2px 2px;
+}
+
+#start-reset {
+    max-width: 1000px;
+    height: 100px;
+    margin: 30px auto;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.game-buttons-div {
+    max-width: 50%;
+    height: 100%;
+    flex: 1;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.game-buttons {
+    height: 40px;
+    width: 90px;
+    flex: 1;
+    margin: auto;
+    border: none;
+    border-radius: 5px;
+    background-color: grey;
+    background-size: 400%;
+    background-position: left;
+    transition: background-position 0.3s ease-in;
+    color: whitesmoke;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.game-buttons:hover {
+    background-position: center;
+    box-shadow: 2px 2px 2px;
+
 }
