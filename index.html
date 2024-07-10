@@ -13,14 +13,53 @@
 <!--Game title-->    
 
 <header id="game-header">
-    <h1>Logo Quiz</h1>
-    <img src="./assets/images/header-gif.gif" alt= "Female Wrestler Intro">
+    <h1>Guess It</h1>
+    <img src="./assets/images/header.gif" alt= "Liam Neeson & Minion">
     <h2>Brain Power On...</h2>
     <h2>Let the Quiz Begin!</h2>
 </header>
 
-<!--Game body-->    
+<!--Game Arena-->    
 
+<div id="game-arena">
+    <div id="arena-image">
+        <img src="./assets/images/pre-game.gif" alt="South Park" id="arena-logo">
+    </div>
+
+    <!-- Message Display -->
+
+    <div id="result-message-area"><p id="result-message"></p></div>
+
+    <!-- Options Radio Buttons -->
+
+    <div id="options-arena">
+        <span>
+            <input type="radio" name="options" id="option-1" class="arena-radio-buttons none-display-property" required>
+            <label for="option-1">Option 1</label>
+        </span>
+        <span>
+            <input type="radio" name="options" id="option-2" class="arena-radio-buttons none-display-property">
+            <label for="option-2">Option 2</label>
+        </span>
+        <span>
+            <input type="radio" name="options" id="option-3" class="arena-radio-buttons none-display-property">
+            <label for="option-3">Option 3</label>
+        </span>
+        <span>
+            <input type="radio" name="options" id="option-4" class="arena-radio-buttons none-display-property">
+            <label for="option-4">Option 4</label>
+        </span>
+    </div>
+    <!-- Submit Button -->
+    <div id="submit-section">
+        <button id="submit-button" data-button="submit" class="none-display-property">Submit</button>
+    </div>
+    <!-- Score Area -->
+    <div id="score-area">
+        <p>Correct Answers: <span id="correct-answer">0</span></p>
+        <p>Incorrect Answers: <span id="incorrect-answer">0</span></p>
+    </div>
+</div>
 <!--Select difficulty level-->    
 
     <script src="./assets/js/script.js"></script>

@@ -47,3 +47,55 @@ h1, h2 {font-family:'Courier New', Courier, monospace;
         letter-spacing: .5rem;
         color: black;
 }
+
+ /*Game Arena Styling*/
+
+ #game-arena {max-width: 1000px;
+    height: 1000px;
+    margin: 1.25rem auto;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px #3e4a3d;
+    position: relative;
+    background-color: rgba(252, 212, 212, 0.5);
+}
+
+#arena-image {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 1.875rem; /*30px*/
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+#arena-logo {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+#options-arena {width: 100%;
+    min-height: 6.25rem;
+    position: absolute;
+    left: 0;
+    bottom: 15.25rem; /*244px*/
+    display: flex;
+    gap: 1rem
+}
+
+#options-arena > span {
+    margin: auto;
+}
+
+.arena-radio-buttons {
+    margin: 1.25rem 0.5rem 1.25rem 1.563rem;
+    width: 20px;
+    height: 20px;
+}
+
+label {
+    margin-right: 1.25rem;
+    font-size: 20px;
+}
