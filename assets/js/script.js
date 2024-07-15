@@ -7,7 +7,7 @@ let comQuestion = ["virat", "ali"];
 let imageSelector;
 let quizNo = 1;
 let difficultyLevel;
-let gameButtons= document.getElementsByTagName("button");
+let buttons= document.getElementsByTagName("button");
 for (let button of buttons){
     button.addEventListener("click", function(){
         if (this.getAttribute("data-button") === "start"){

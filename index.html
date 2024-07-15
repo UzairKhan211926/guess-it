@@ -1,105 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Guess It!</title>
+  </head>
+  <body>
+    <!-- PAGE HEADER AREA -->
+    <header id="game-header">
+      <h1>Guess It</h1>
+      <img src="./assets/images/header.gif" alt="Liam Neeson & Minion" >
+      <h2>Brain Power On...</h2>
+      <h2>Let the Quiz Begin!</h2>
+    </header>
+    <!-- GAME AREA -->
+    <div id="game-arena">
+      <div id="arena-image">
+        <img
+          src="./assets/images/pre-game.gif"
+          alt="South Park"
+          id="arena-logo"
+        >
+      </div>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/styles.css">
+      <!-- Message Display -->
 
-<title>Guess It!</title>
-</head>
+      <div id="game-result-space"><p id="end-score"></p></div>
 
-<body>
+      <!-- Options Radio Buttons -->
 
-<!--Game title-->    
-
-<header id="game-header">
-    <h1>Guess It</h1>
-    <img src="./assets/images/header.gif" alt= "Liam Neeson & Minion">
-    <h2>Brain Power On...</h2>
-    <h2>Let the Quiz Begin!</h2>
-</header>
-
-<!--Game Arena-->    
-
-<div id="game-arena">
-    <div id="arena-image">
-        <img src="./assets/images/pre-game.gif" alt="South Park" id="arena-logo">
-    </div>
-
-    <!-- Message Display -->
-
-    <div id="game-result-space"><p id="end-game-message"></p></div>
-
-    <!-- Options for Arena -->
-
-    <div id="options-arena">
+      <div id="options-arena">
         <span>
-            <input type="radio" name="options" id="option-1" 
-            class="arena-radio-buttons none-display-property" required>
-            <label for="option-1" class="none-display-property">Option 1</label>
+          <input
+            type="radio"
+            name="options"
+            id="option-1"
+            class="arena-radio-buttons none-display-property"
+            required
+          />
+          <label for="option-1" class="none-display-property">Option 1</label>
         </span>
         <span>
-            <input type="radio" name="options" id="option-2" 
-            class="arena-radio-buttons none-display-property">
-            <label for="option-2" class="none-display-property">Option 2</label>
+          <input
+            type="radio"
+            name="options"
+            id="option-2"
+            class="arena-radio-buttons none-display-property"
+          />
+          <label for="option-2" class="none-display-property">Option 2</label>
         </span>
         <span>
-            <input type="radio" name="options" id="option-3" 
-            class="arena-radio-buttons none-display-property">
-            <label for="option-3" class="none-display-property">Option 3</label>
+          <input
+            type="radio"
+            name="options"
+            id="option-3"
+            class="arena-radio-buttons none-display-property"
+          />
+          <label for="option-3" class="none-display-property">Option 3</label>
         </span>
         <span>
-            <input type="radio" name="options" id="option-4" 
-            class="arena-radio-buttons none-display-property">
-            <label for="option-4" class="none-display-property">Option 4</label>
+          <input
+            type="radio"
+            name="options"
+            id="option-4"
+            class="arena-radio-buttons none-display-property"
+          />
+          <label for="option-4" class="none-display-property">Option 4</label>
         </span>
+      </div>
+
+      <!-- Submit Button -->
+
+      <div id="arena-submit">
+        <button
+          id="arena-submit-button"
+          data-button="submit"
+          class="none-display-property"
+        >
+          Submit
+        </button>
+      </div>
+
+      <!-- Score Area -->
+
+      <div id="score-arena">
+        <p>Correct Answers: <span id="right-answer">0</span></p>
+        <p>Incorrect Answers: <span id="wrong-answer">0</span></p>
+      </div>
     </div>
 
-    <!-- Submit Button -->
-    
-    <div id="arena-submit">
-        <button id="arena-submit-button" data-button="submit" 
-        class="none-display-property">Submit</button>
-    </div>
-    
-    <!-- Score Area -->
-    
-    <div id="score-arena">
-        <p>Correct Answers: <span id="correct-answer">0</span></p>
-        <p>Incorrect Answers: <span id="incorrect-answer">0</span></p>
-    </div>
-</div>
+    <!-- GAME MODES AREA -->
 
-<!--Select difficulty level-->
-
-<div id="rules-div">
-    <h3>Game Modes:</h3>
-    <ol id="rule-list">
-        <li>Three modes of game: Easy, Medium, Hard</li>
+    <div id="rules-arena">
+      <h3>Game Modes:</h3>
+      <ol id="arena-rule-list">
+        <li>Three modes of game: Easy, Medium, Hard.</li>
         <li>Easy: 5 questions.</li>
         <li>Medium: 10 questions.</li>
         <li>Hard: 15 questions.</li>
-        <li>Reset the game once over to replay.</li>
-    </ol>
-    <p>Pick Difficulty Level & Click "Start"!</p>
-</div>
-
-<!-- START/RESET GAME BUTTONS AREA -->
-
-<div id="start-reset">
-    <div class="game-buttons-div">
-        <button class="game-buttons" data-button="start" data-mode="5">Easy</button>
-        <button class="game-buttons" data-button="start" data-mode="10">Medium</button>
-        <button class="game-buttons" data-button="start" data-mode="15">Hard</button>
+        <li>Feel like starting a new game. Just click Reset!</li>
+      </ol>
+      <p>Pick Difficulty Level & Click "Start"!</p>
     </div>
-    <div class="game-buttons-div">
-        <button class="game-buttons" data-button="reset">Reset</button>
+
+    <!-- START/RESET GAME BUTTONS AREA -->
+
+    <div id="start-game-reset-game">
+      <div class="game-buttons-div">
+        <button class="game-buttons" data-button="start-game" data-mode="5">
+          Easy
+        </button>
+        <button class="game-buttons" data-button="start-game" data-mode="10">
+          Medium
+        </button>
+        <button class="game-buttons" data-button="start-game" data-mode="15">
+          Hard
+        </button>
+      </div>
+      <div class="game-buttons-div">
+        <button class="game-buttons" data-button="reset-game">Reset</button>
+      </div>
     </div>
-</div>
 
     <script src="./assets/js/script.js"></script>
-</body>
-
-</html> 
+  </body>
+</html>
