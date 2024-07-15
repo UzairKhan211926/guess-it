@@ -7,7 +7,11 @@
     max-width: 60%;
     margin: auto;
     margin-top: 20px;
-}                                             
+}
+
+#game-header > img {
+    width: fit-content;
+}
 
 h1 {
     text-align: center;
@@ -27,40 +31,46 @@ h2 {
 
 /*Body styling*/
 
-* {margin: 0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
  }
 
+ /*disabling gradient
 :root {--bg-color: linear-gradient(to right top,
-    #f8acac, #f8acdb, #daacf8, #8e8cf7,
+    #3a64be, #f8acdb, #daacf8, #8e8cf7,
     #acdcf8, #82f1e3, #7af3c1, #6efa69,
     #d1f8ac, #faf28a, #f3be4c, #f36262);}
-
-body { background-image: var(--bg-color);
-       font-family:Arial, Helvetica, sans-serif;
-       color: #3e4a3d;
+*/
+body {
+    /*background-image: var(--bg-color);*/
+    background-color: rgb(150, 150, 150);
+    font-family:Arial, Helvetica, sans-serif;
+    color: black;
 }
 
 h1, h2 {font-family:'Courier New', Courier, monospace;
         font-weight: 950;
         letter-spacing: 8px;
-        color: black;
+        color: white(0, 0, 0, 0);
 }
 
  /*Game Arena Styling*/
 
- #game-arena {max-width: 1000px;
+ #game-arena {
+    max-width: 1000px;
     height: 1000px;
     margin: 20px auto;
     border-radius: 20px;
     box-shadow: 3px 3px 3px #3e4a3d;
     position: relative;
-    background-color: rgba(252, 212, 212, 0.5);
+    background-color: black;
+    color: white;
 }
 
 #arena-image {
-    width: 600px;
+    width: 1000px;
     height: 600px;
     position: absolute;
     top: 30px;
@@ -76,7 +86,8 @@ h1, h2 {font-family:'Courier New', Courier, monospace;
     max-height: 500px;
 }
 
-#options-arena {width: 100%;
+#options-arena {
+    width: 100%;
     min-height: 100px;
     position: absolute;
     left: 0;
@@ -103,6 +114,26 @@ label {
 .none-display-property {
     display: none;
 }
+
+#score-arena {width: 80%;
+    min-height: 7.5rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 2rem;
+
+}
+
+#score-arena> p {flex: 1;
+       margin: auto;
+       font-size: 130%;
+       font-weight: 600;
+       text-align: center;
+}
+
+.display-property {display: none;}
 
 #arena-submit {
     width: 50%;
@@ -159,11 +190,11 @@ label {
     margin: auto;
     border: none;
     border-radius: 5px;
-    background-color: grey;
+    background-color: black;
     background-size: 400%;
     background-position: left;
     transition: background-position 0.3s ease-in;
-    color: whitesmoke;
+    color: white;
     font-family: inherit;
     font-weight: 600;
     cursor: pointer;
@@ -173,4 +204,20 @@ label {
     background-position: center;
     box-shadow: 2px 2px 2px;
 
+}
+#game-result-space {min-width: 50%;
+    height: 6.25rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 23.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+#end-game-message {
+    font-size: 150%;
+    font-weight: 700;
+    margin: auto;
+    letter-spacing: 1px;
 }

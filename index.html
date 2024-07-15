@@ -30,7 +30,7 @@
 
     <!-- Message Display -->
 
-    <div id="result-message-area"><p id="result-message"></p></div>
+    <div id="game-result-space"><p id="end-game-message"></p></div>
 
     <!-- Options for Arena -->
 
@@ -66,7 +66,7 @@
     
     <!-- Score Area -->
     
-    <div id="score-area">
+    <div id="score-arena">
         <p>Correct Answers: <span id="correct-answer">0</span></p>
         <p>Incorrect Answers: <span id="incorrect-answer">0</span></p>
     </div>
@@ -77,22 +77,22 @@
 <div id="rules-div">
     <h3>Game Modes:</h3>
     <ol id="rule-list">
-        <li>Three modes of game: Short, Medium, Long.</li>
-        <li>Short: 5 questions.</li>
+        <li>Three modes of game: Easy, Medium, Hard</li>
+        <li>Easy: 5 questions.</li>
         <li>Medium: 10 questions.</li>
-        <li>Long: 15 questions.</li>
+        <li>Hard: 15 questions.</li>
         <li>Reset the game once over to replay.</li>
     </ol>
-    <p>Click on you choice, and let the game begin!</p>
+    <p>Pick Difficulty Level & Click "Start"!</p>
 </div>
 
 <!-- START/RESET GAME BUTTONS AREA -->
 
 <div id="start-reset">
     <div class="game-buttons-div">
-        <button class="game-buttons" data-button="start" data-mode="5">Short</button>
+        <button class="game-buttons" data-button="start" data-mode="5">Easy</button>
         <button class="game-buttons" data-button="start" data-mode="10">Medium</button>
-        <button class="game-buttons" data-button="start" data-mode="15">Long</button>
+        <button class="game-buttons" data-button="start" data-mode="15">Hard</button>
     </div>
     <div class="game-buttons-div">
         <button class="game-buttons" data-button="reset">Reset</button>
